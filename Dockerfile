@@ -11,6 +11,5 @@ RUN pip install -r requirements.txt
 
 COPY . /yu-gi-crud
 
-ENTRYPOINT [ "python", "app.py" ]
- 
-##ENTRYPOINT [ "gunicorn", "--bind=0.0.0.0:8001", "--workers=4", "application:app" ]
+##ENTRYPOINT [ "python", "app.py" ]
+ENTRYPOINT [ "gunicorn", "--bind=0.0.0.0:5000", "application:app" ]
