@@ -11,9 +11,7 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "python" ]
-
-CMD [ "app.py" ]
+ENTRYPOINT [ "/usr/local/bin/gunicorn" "-bind=0.0.0.0:8001" "-workers=4" "application:app" ]
 
 
 
