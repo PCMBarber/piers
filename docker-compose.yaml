@@ -17,7 +17,7 @@ services:
     client:
       image: stratcastor/yu-gi-crud:latest
       ports:
-        - target: 8001
+        - target: 5000
       build: .
       container_name: yu-gi-crud
       environment:
