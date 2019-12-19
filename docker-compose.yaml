@@ -18,7 +18,7 @@ services:
       image: stratcastor/yu-gi-crud:latest
       ports:
         - target: 5000
-      build: ./application
+      build: .
       container_name: yu-gi-crud
       environment:
         - MYSQL_USER=root
